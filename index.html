@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMXA | Developer & Automation Specialist</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+        /* Keyframes for animations */
+        @keyframes zoomOut {
+            0% { transform: scale(2.0); }
+            100% { transform: scale(1.0); }
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Fullscreen intro section */
+        .intro {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #550703;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-family: "Arial Black", sans-serif;
+            z-index: 100;
+            animation: fadeOut 3s ease-in-out 6s forwards;
+        }
+
+        .gif { 
+            background: url('http://37.media.tumblr.com/tumblr_mbha9qWF401qcixnko4_500.gif') no-repeat center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: fadeOut 6s ease-in-out forwards;
+        }
+
+        .marvel {
+            font-size: 15em;
+            animation: zoomOut 6s ease-in-out;
+        }
+
+        .studios {
+            font-family: "Orbitron", sans-serif;
+            font-weight: bolder;
+            letter-spacing: 20px;
+            font-size: 2em;
+            animation: zoomOut 6s ease-in-out;
+        }
+
+        /* Profile section (hidden initially) */
+        .profile {
+            display: none;
+            opacity: 0;
+            text-align: center;
+            padding: 50px;
+            background: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            animation: fadeIn 3s ease-in-out 6s forwards;
+        }
+
+        /* Show profile after intro animation */
+        .show-profile {
+            display: block;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        .about {
+            max-width: 600px;
+            margin: 20px auto;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Intro Section -->
+    <div class="intro">
+        <div class="gif"></div>
+        <div class="marvel">OMXA</div>
+        <div class="studios">STUDIOS</div>
+    </div>
+
+    <!-- Profile Section (Hidden initially) -->
+    <div class="profile">
+        <h1>Welcome to OMXA's World!</h1>
+        <p class="about">
+            Hey, I'm OMXA! A passionate **developer, game creator, and automation specialist**.  
+            I love building **Discord bots, games, and automating cool stuff** to make life easier.  
+            🚀 Let's create something awesome together!
+        </p>
+    </div>
+
+</body>
+</html>
